@@ -2,6 +2,11 @@ import './App.css';
 import amountSold from "./helpers/amountSold.js";
 import amountPurchased from "./helpers/amountPurchased.js";
 import amountToBeSold from "./helpers/amountToBeSold.js";
+import nameTv from "./helpers/nameTv.js";
+import priceEuro from "./helpers/priceEuro.js";
+import screenSize from "./helpers/screenSize.js";
+import {bestSellingTv} from "./constants/inventory.js";
+import samsungImage from "./assets/screenshots/samsung.png";
 
 function App() {
     return (
@@ -28,8 +33,15 @@ function App() {
             </main>
             <footer>
                 <h3>Best verkochte tv</h3>
-                <article>
-
+                <article className="bestSold">
+                    <span>
+                        <img src={samsungImage} alt= "afbeelding tv"/>
+                    </span>
+                    <div className="specsTv">
+                        <div>{nameTv(bestSellingTv)}</div>
+                        <div>{priceEuro(bestSellingTv.price)}</div>
+                        <div>{screenSize(bestSellingTv)}</div>
+                    </div>
                 </article>
             </footer>
         </>

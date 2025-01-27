@@ -1,8 +1,9 @@
 import {bestSellingTv} from "../constants/inventory.js";
 
 function priceEuro (price) {
-    let priceInEuro = "";
-    return priceInEuro = "€" + price + ",-";
+    return "€" + price + ",-";
 }
 
-export default priceEuro();
+export default priceEuro;
+
+

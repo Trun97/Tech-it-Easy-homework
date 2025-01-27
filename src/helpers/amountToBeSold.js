@@ -8,3 +8,6 @@ function amountToBeSold () {
 }
 
 export default amountToBeSold();
+
+//waarom kan ik hier exporteren met amountToBeSold() ..dus met de haakjes, en bij mijn helper nameTv
+//en alles wat erna komt niet?

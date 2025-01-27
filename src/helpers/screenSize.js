@@ -11,4 +11,4 @@ function screenSize (ObjectName) {
     return sizes;
 }
 
-export default screenSize();
+export default screenSize;
