@@ -45,7 +45,7 @@ function App() {
             <footer>
                 <h3>Best verkochte tv</h3>
                 <article className="bestSold">
-                    <span>
+                    <span className={"samsung"}>
                         <img src={samsungImage} alt="afbeelding tv"/>
                     </span>
                     <div className="specs">
