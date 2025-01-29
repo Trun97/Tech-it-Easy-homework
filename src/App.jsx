@@ -7,8 +7,19 @@ import priceEuro from "./helpers/priceEuro.js";
 import screenSize from "./helpers/screenSize.js";
 import {bestSellingTv} from "./constants/inventory.js";
 import samsungImage from "./assets/screenshots/samsung.png";
+import checkImage from "./assets/check.png";
+import minusImage from "./assets/minus.png";
 
 function App() {
+    function clickOne () {
+        console.log("Meest verkocht eerst");
+    }
+    function clickTwo () {
+        console.log("Goedkoopste eerst");
+    }
+    function clickThree () {
+        console.log("Meest geschikt voor sport eerst");
+    }
     return (
         <>
             <header>
@@ -35,14 +46,41 @@ function App() {
                 <h3>Best verkochte tv</h3>
                 <article className="bestSold">
                     <span>
-                        <img src={samsungImage} alt= "afbeelding tv"/>
+                        <img src={samsungImage} alt="afbeelding tv"/>
                     </span>
-                    <div className="specsTv">
-                        <div>{nameTv(bestSellingTv)}</div>
-                        <div>{priceEuro(bestSellingTv.price)}</div>
-                        <div>{screenSize(bestSellingTv)}</div>
+                    <div className="specs">
+                        <div className="specsTv">
+                            <div>{nameTv(bestSellingTv)}</div>
+                            <div>{priceEuro(bestSellingTv.price)}</div>
+                            <div>{screenSize(bestSellingTv)}</div>
+                        </div>
+                        <div className="specsTv2">
+                        <span>
+                            <img src={checkImage} alt="check" className="images"/>
+                        </span>
+                            <p>wifi</p>
+                            <span>
+                            <img src={minusImage} alt="minus" className="images"/>
+                        </span>
+                            <p>speech</p>
+                            <span>
+                            <img src={checkImage} alt="check" className="images"/>
+                        </span>
+                            <p>hdr</p>
+                            <span>
+                            <img src={checkImage} alt="check" className="images"/>
+                        </span>
+                            <p>bleutooth</p>
+                            <span>
+                            <img src={minusImage} alt="minus" className="images"/>
+                        </span>
+                            <p>ambilight</p>
+                        </div>
                     </div>
                 </article>
+                <button type="button" onClick={clickOne}>Meest verkocht eerst</button>
+                <button type="button" onClick={clickTwo}>Goedkoopste eerst</button>
+                <button type="button" onClick={clickThree}>Meest geschikt voor sport eerst</button>
             </footer>
         </>
     )
