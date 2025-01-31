@@ -9,6 +9,7 @@ import {bestSellingTv} from "./constants/inventory.js";
 import samsungImage from "./assets/screenshots/samsung.png";
 import checkImage from "./assets/check.png";
 import minusImage from "./assets/minus.png";
+import {inventory} from "./constants/inventory.js";
 
 function App() {
     function clickOne() {
@@ -22,7 +23,9 @@ function App() {
     function clickThree() {
         console.log("Meest geschikt voor sport eerst");
     }
-
+    const brandNames= inventory.map((brandName) => {
+        return brandName.brand;
+    })
     return (
         <div className="body">
             <header>
@@ -87,7 +90,14 @@ function App() {
                     <button type="button" onClick={clickThree}>Meest geschikt voor sport eerst</button>
                 </div>
             </footer>
+            <ul>
+                {brandNames.map((brandname) => {
+                    return <li>{brandname}</li>
+                })}
+            </ul>
         </div>
+
+
     )
 }
 

@@ -53,7 +53,7 @@
     display: flex;
     border: black dotted 2px;
     background-color: lightgrey;
-    max-width: 88vh;
+    max-width: 655px;
     height: 20vh;
     margin-bottom: 10px;
 }
