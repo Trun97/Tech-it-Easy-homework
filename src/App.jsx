@@ -11,17 +11,20 @@ import checkImage from "./assets/check.png";
 import minusImage from "./assets/minus.png";
 
 function App() {
-    function clickOne () {
+    function clickOne() {
         console.log("Meest verkocht eerst");
     }
-    function clickTwo () {
+
+    function clickTwo() {
         console.log("Goedkoopste eerst");
     }
-    function clickThree () {
+
+    function clickThree() {
         console.log("Meest geschikt voor sport eerst");
     }
+
     return (
-        <>
+        <div className="body">
             <header>
                 <h1>Tech it easy dashboard</h1>
             </header>
@@ -78,11 +81,13 @@ function App() {
                         </div>
                     </div>
                 </article>
-                <button type="button" onClick={clickOne}>Meest verkocht eerst</button>
-                <button type="button" onClick={clickTwo}>Goedkoopste eerst</button>
-                <button type="button" onClick={clickThree}>Meest geschikt voor sport eerst</button>
+                <div className="buttons">
+                    <button type="button" onClick={clickOne}>Meest verkocht eerst</button>
+                    <button type="button" onClick={clickTwo}>Goedkoopste eerst</button>
+                    <button type="button" onClick={clickThree}>Meest geschikt voor sport eerst</button>
+                </div>
             </footer>
-        </>
+        </div>
     )
 }
 
