@@ -1,4 +1,5 @@
 import {bestSellingTv} from "../constants/inventory.js";
+import {inventory} from "../constants/inventory.js";
 
 
 function nameTv (nameObject) {

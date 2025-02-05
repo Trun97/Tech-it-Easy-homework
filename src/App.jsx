@@ -10,6 +10,7 @@ import samsungImage from "./assets/screenshots/samsung.png";
 import checkImage from "./assets/check.png";
 import minusImage from "./assets/minus.png";
 import {inventory} from "./constants/inventory.js";
+import allTvs from "./helpers/allTvs.jsx";
 
 function App() {
     function clickOne() {
@@ -25,6 +26,9 @@ function App() {
     }
     const brandNames= inventory.map((brandName) => {
         return brandName.brand;
+    })
+    const allTvs = inventory.map((allTv) => {
+        return allTv;
     })
     return (
         <div className="body">
@@ -91,10 +95,14 @@ function App() {
                 </div>
             </footer>
             <ul>
-                {brandNames.map((brandname) => {
-                    return <li>{brandname}</li>
+                {brandNames.map((brandName) => {
+                    return <li key={inventory.type}>{brandName}</li>
                 })}
             </ul>
+            {allTvs.map((alltv) => {
+                return <div>{alltv}</div>
+            })}
+
         </div>
 
 

@@ -417,3 +417,7 @@ export let inventory = [
 //     return brandName.brand;
 // })
 // console.log(brandNames);
+
+// for (let i = 0; i < inventory.length; i++) {
+// //     console.log(inventory[i].type);
+// // }
