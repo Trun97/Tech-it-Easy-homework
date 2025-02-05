@@ -1,4 +1,6 @@
 // BEST VERKOPENDE TV
+import {isValidElement} from "react";
+
 export const bestSellingTv = {
     type: 'UHD 55AU7040',
     name: 'Crystal',
@@ -121,7 +123,7 @@ export let inventory = [
         screenQuality: 'Ultra HD/4K',
         smartTv: true,
         sourceImg: 'https://media.s-bol.com/B9n73k76VG2N/vQYEKNn/1200x734.jpg',
-        options:     [
+        options: [
             {
                 name: "wifi",
                 applicable: true,
@@ -157,7 +159,7 @@ export let inventory = [
         screenQuality: 'Ultra HD/4K',
         sourceImg: 'https://media.s-bol.com/ROVXLp4q9joq/1200x751.jpg',
         smartTv: true,
-        options:     [
+        options: [
             {
                 name: "wifi",
                 applicable: true,
@@ -327,5 +329,95 @@ export let inventory = [
         sold: 8,
     },
 ];
+// Opdracht 1a: Gebruik een array-methode om een array te maken met daarin alle tv-type namen. Log de uitkomst in de console.
+// const typeName = inventory.map((stock) => {
+//     return stock.name;
+// })
+// console.log(typeName);
+
+//     Opdracht 1b: Gebruik een array-methode om alle informatie te verzamelen van de tv's die volledig uitverkocht zijn. Log de uitkomst in de console.
+
+// const outOfStock = [];
+// for (let i = 0; i < inventory.length; i++) {
+//     if (inventory[i].sold - inventory[i].originalStock >= 0) {
+//         outOfStock.push(inventory[i]);
+//     }
+// }
+// console.log(outOfStock);
+
+// const outOfStock = inventory.filter((stock) => {
+//     if (stock.sold - stock.originalStock >= 0) {
+//         return stock;
+//     }
+// })
+// console.log(outOfStock);
 
 
+// Opdracht 1c: Gebruik een array-methode om de informatie van het tv-type 'NH3216SMART' op te halen.
+
+// const searchType = inventory.find((stock) => {
+//     return stock.type === 'NH3216SMART';
+// })
+// console.log(searchType);
+
+//     Opdracht 1d: Gebruik een array-methode om een lijst te maken van de merk- en tv-namen waarbij aangegeven wordt of
+//     deze geschikt zijn voor sport-kijkers (een verversingssnelheid van 100Hz of hoger). Doe dit in het
+//     format { name: 'Toshiba HD TV', suitable: false }. Log de uitkomst in de console.
+
+// const suitableForSport = inventory.map((stock) => {
+//     if (stock.refreshRate >= 100) {
+//         return { name: stock.brand + " " + stock.name + ", " + "suitable: true"};
+//     } else return {name: stock.brand + " " + stock.name + ", " + "suitable: false"};
+// })
+// console.log(suitableForSport);
+
+// Opdracht 1e (uitdaging): Gebruik array-methoden om alle informatie te verzamelen van de tv's die beschikbaar zijn
+// in schermgroottes van 65 inch en groter.
+
+// ik kan het wel met een for loop.
+
+// const largeSizes = [];
+// for (let i = 0; i < inventory.length; i++) {
+//     for (let j = 0; j < inventory[i].availableSizes.length; j++) {
+//         if (inventory[i].availableSizes[j] >= 65) {
+//             largeSizes.push(inventory[i])
+//              break
+//
+//
+//         }
+//
+//     }
+// }
+// console.log(largeSizes);
+
+
+//
+//  Opdracht 1f (uitdaging): Gebruik array-methoden om alle informatie te verzamelen van de tv's die over ambilight
+//  beschikken. Log de uitkomst in de console.
+
+// const ambiLight = [];
+// for (let i = 0; i < inventory.length; i++) {
+//     for (let j = 0; j < inventory[i].options.length; j++) {
+//         if (inventory[i].options[j].name === "ambiLight" && inventory[i].options[j].applicable === true) {
+//             ambiLight.push(inventory[i]);
+//             break
+//         }
+//     }
+// }console.log(ambiLight);
+
+// const ambiLight = inventory.filter((stock) => {
+//     return stock.options[4].applicable === true;
+// });
+// console.log(ambiLight);
+
+// const ambiLight = inventory.filter(stock => stock.options[4].applicable === true);
+// console.log(ambiLight);
+
+// const brandNames= inventory.map((brandName) => {
+//     return brandName.brand;
+// })
+// console.log(brandNames);
+
+// for (let i = 0; i < inventory.length; i++) {
+// //     console.log(inventory[i].type);
+// // }
